@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/design.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger mr-0" href="#page-top">
+                <h6 class="mb-0 mr-0"><img class="img-fluid mr-sm-2 logo" src="assets/images/covid19.png" alt=""
+                        srcset=""> Covid19 Tracker</h6>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger mr-3" href="index.htm">
+                            <h6 class="mb-0 navbar-hover">Home</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger mr-3" href="cities.htm">
+                            <h6 class="mb-0 navbar-hover">Cities</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger mr-3" href="about.htm">
+                            <h6 class="mb-0 navbar-hover">About</h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+    <div class="container">
+        <div class="mt-4 mb-5">
+            <img src="assets/images/banner_cities.png" class="img-fluid mt-5 shadow bg-white rounded" alt="Image Banner">
+        </div>
+        <div class="card-municipality-list">
+            <div class="search-container">
+                <div class="container pb-4">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input id="myInput" type="text" class="form-control" placeholder="Search" onkeyup="search()">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div id="Municipalities" class="row justify-content-around">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <script>
+
+        class municipal {
+            constructor(city, imageUrl, cases, active, deaths, recovered) {
+                this.city = city;
+                this.imageUrl = imageUrl;
+                this.cases = cases;
+                this.active = active;
+                this.deaths = deaths;
+                this.recovered = recovered;
+            }
+        }
+
+        var municipalityList;
+
+        populateMunicipality();
+
+        var allMunicipality = '';
+
+        municipalityList.forEach(municipality => {
+            allMunicipality += createCard(
+                municipality.city, 
+                municipality.imageUrl, 
+                municipality.cases, 
+                municipality.active,
+                municipality.deaths, 
+                municipality.recovered);
+        });
+
+        console.log(createCard());
+
+
+
+        function populateMunicipality() {
+            municipalityList = [
+
+                new municipal(
+                    city = 'Angono',
+                    imageUrl = 'Angono.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Binangonan',
+                    imageUrl = 'Binangonan.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Antipolo',
+                    imageUrl = 'Antipolo.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Baras',
+                    imageUrl = 'Baras.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Jala-Jala',
+                    imageUrl = 'Jalajala.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Motalban',
+                    imageUrl = 'Montalban.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Cainta',
+                    imageUrl = 'Cainta.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+                new municipal(
+                    city = 'Cardona',
+                    imageUrl = 'Cardona.jpg',
+                    cases = '1000',
+                    active = '1200',
+                    deaths = '500',
+                    recovered = '2000'
+                ),
+
+            ];
+        }
+
+        function search() {
+            var input, filter, card, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            li = document.getElementsByClassName("card-title");
+            card = document.getElementsByClassName("card");
+            for (i = 0; i < card.length; i++) {
+                console.log(li[i].innerHTML);
+                a = li[i];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card[i].style.display = "";
+                } else {
+                    card[i].style.display = "none";
+                }
+            }
+        }
+
+
+
+        function createCard(city,imageUrl,cases, active, deaths, recovered) {
+            var item =
+                '<div class="col-sm-6 col-md-4 card col-lg-3 mt-4 card-list px-0">' +
+                '<img src="assets/images/'+ imageUrl +'" class="card-img-top img-fluid w-100 img-max-h" alt="...">' +
+                '<div class="card-body">' +
+                '<h5 class="card-title">' + city + '</h5>' +
+                '<div class="card-text">' +
+                '<div class="row">'+
+                '<div class ="col text-data">' + active +'</div>' +
+                '<div class ="col text-data">' + cases +'</div>' +
+                '</div>' +
+                '<div class="row">'+
+                '<div class ="col text-small">cases</div>' +
+                '<div class ="col text-small">active</div>' +
+                '</div>' +
+                '<div class="row">'+
+                '<div class ="col text-data">' + deaths +'</div>' +
+                '<div class ="col text-data">' + recovered +'</div>' +
+                '</div>' +
+                '<div class="row">'+
+                '<div class ="col text-small">deaths</div>' +
+                '<div class ="col text-small">recovered</div>' +
+                '</div>' +
+                '</div>' +
+                '<div class="float-right">' +
+                '<a class="btn btn-primary btn-sm mt-4">View more</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+            return item;
+        }
+
+        document.getElementById("Municipalities").innerHTML = allMunicipality;
+
+    </script>
+    <!-- DITO MAG TATAPOS-->
+    <!-- Wag buburahin ang part na to hindi gagana ang mga animations at navigation bar -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- smooth navbar scrolling -->
+    <script src="assets/js/scrolling-nav.js"></script>
+</body>
+
+</html>
