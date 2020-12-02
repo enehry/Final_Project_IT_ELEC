@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
-*{
+body{
     font-family: 'Roboto', sans-serif !important;
 }
 
@@ -29,6 +29,13 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 600;
     line-height: 1.3em;
     font-size: 3.5vw;
+}
+
+.bg-accent{
+    background-color: #191919;
+}
+.page-footer{
+    font-size: 13px !important; 
 }
 
 .carousel-inner .carousel-item img {

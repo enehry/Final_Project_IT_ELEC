@@ -13,6 +13,8 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/design.css">
+
+    <link rel="stylesheet" href="assets/vendor/font-awesome/all.css">
 </head>
 
 <body>
@@ -51,21 +53,20 @@
     <!-- Navigation End -->
     <div class="container">
         <div class="mt-4 mb-5">
-            <img src="assets/images/banner_cities.png" class="img-fluid mt-5 shadow bg-white rounded" alt="Image Banner">
+            <img src="assets/images/banner_cities.png" class="img-fluid mt-5 shadow bg-white rounded"
+                alt="Image Banner">
         </div>
         <div class="card-municipality-list">
             <div class="search-container">
                 <div class="container pb-4">
                     <div class="form-group has-search">
-                        <span class="fa fa-search form-control-feedback"></span>
                         <input id="myInput" type="text" class="form-control" placeholder="Search" onkeyup="search()">
+                        <span class="fa fa-search errspan"></span>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div id="Municipalities" class="row justify-content-around">
-
-                </div>
+                <div id="Municipalities" class="row justify-content-around"></div>
             </div>
         </div>
     </div>
@@ -74,22 +75,64 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+    <!-- Modal -->
+    <div class="modal fade" id="MunicipalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="MunicipalModalLabel">Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <canvas id="pieChart" style="max-width: 500px;"></canvas>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="page-footer mt-4 bg-accent">
+        <div class="footer-copyright text-center text-light py-3">© 2020 Copyright:
+            <a href="#">HNJV GROUP</a>
+        </div>
+    </footer>
+    <!-- END OF FOOTER -->
 
 
 
+
+
+
+    <!-- DITO MAG TATAPOS-->
+    <!-- Wag buburahin ang part na to hindi gagana ang mga animations at navigation bar -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- smooth navbar scrolling -->
+    <script src="assets/js/scrolling-nav.js"></script>
+    <script src="assets/js/Chart.js"></script>
     <script>
 
         class municipal {
-            constructor(city, imageUrl, cases, active, deaths, recovered) {
+            constructor(city, imageUrl, cases, active, deaths, recovered, phone) {
                 this.city = city;
                 this.imageUrl = imageUrl;
                 this.cases = cases;
                 this.active = active;
                 this.deaths = deaths;
                 this.recovered = recovered;
+                this.phone = phone;
             }
         }
 
@@ -99,15 +142,28 @@
 
         var allMunicipality = '';
 
-        municipalityList.forEach(municipality => {
+        for (i = 0; i < municipalityList.length; i++) {
             allMunicipality += createCard(
-                municipality.city, 
-                municipality.imageUrl, 
-                municipality.cases, 
-                municipality.active,
-                municipality.deaths, 
-                municipality.recovered);
-        });
+                i,
+                municipalityList[i].city,
+                municipalityList[i].imageUrl,
+                municipalityList[i].cases,
+                municipalityList[i].active,
+                municipalityList[i].deaths,
+                municipalityList[i].recovered,
+                municipalityList[i].phone,
+            );
+        }
+
+        // municipalityList.forEach(municipality => {
+        //     allMunicipality += createCard(
+        //         municipality.city,
+        //         municipality.imageUrl,
+        //         municipality.cases,
+        //         municipality.active,
+        //         municipality.deaths,
+        //         municipality.recovered);
+        // });
 
         console.log(createCard());
 
@@ -119,66 +175,129 @@
                 new municipal(
                     city = 'Angono',
                     imageUrl = 'Angono.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
-                ),
-                new municipal(
-                    city = 'Binangonan',
-                    imageUrl = 'Binangonan.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    cases = '783',
+                    active = '18',
+                    deaths = '29',
+                    recovered = '736',
+                    phone = '0956-154-5954'
+
                 ),
                 new municipal(
                     city = 'Antipolo',
                     imageUrl = 'Antipolo.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    cases = '3631',
+                    active = '77',
+                    deaths = '94',
+                    recovered = '3460',
+                    phone = '(8)651-7800'
                 ),
                 new municipal(
                     city = 'Baras',
                     imageUrl = 'Baras.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    cases = '219',
+                    active = '9',
+                    deaths = '8',
+                    recovered = '202',
+                    phone = '(8)653-3909'
                 ),
                 new municipal(
-                    city = 'Jala-Jala',
-                    imageUrl = 'Jalajala.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
-                ),
-                new municipal(
-                    city = 'Motalban',
-                    imageUrl = 'Montalban.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    city = 'Binangonan',
+                    imageUrl = 'Binangonan.jpg',
+                    cases = '1125',
+                    active = '44',
+                    deaths = '48',
+                    recovered = '1030',
+                    phone = '(8)652-5413'
                 ),
                 new municipal(
                     city = 'Cainta',
                     imageUrl = 'Cainta.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    cases = '1987',
+                    active = '68',
+                    deaths = '71',
+                    recovered = '1848',
+                    phone = '0961-260-7696'
                 ),
                 new municipal(
                     city = 'Cardona',
                     imageUrl = 'Cardona.jpg',
-                    cases = '1000',
-                    active = '1200',
-                    deaths = '500',
-                    recovered = '2000'
+                    cases = '181',
+                    active = '3',
+                    deaths = '7',
+                    recovered = '171',
+                    phone = '(7)954-9728'
+                ),
+                new municipal(
+                    city = 'Jala-Jala',
+                    imageUrl = 'Jalajala.jpg',
+                    cases = '30',
+                    active = '0',
+                    deaths = '2',
+                    recovered = '28',
+                    phone = '0917-896-8970'
+                ),
+                new municipal(
+                    city = 'Montalban',
+                    imageUrl = 'Montalban.jpg',
+                    cases = '114',
+                    active = '34',
+                    deaths = '47',
+                    recovered = '1033',
+                    phone = '(8)531-6106'
+                ),
+                new municipal(
+                    city = 'Morong',
+                    imageUrl = 'Morong.jpg',
+                    cases = '216',
+                    active = '4',
+                    deaths = '5',
+                    recovered = '207',
+                    phone = '0926-691-4281'
+                ),
+                new municipal(
+                    city = 'Pililla',
+                    imageUrl = 'Pililla.jpg',
+                    cases = '99',
+                    active = '4',
+                    deaths = '7',
+                    recovered = '88',
+                    phone = '0917-525-1646'
+                ),
+                new municipal(
+                    city = 'San Mateo',
+                    imageUrl = 'San Mateo.jpg',
+                    cases = '1001',
+                    active = '42',
+                    deaths = '43',
+                    recovered = '916',
+                    phone = '0917-888-8247'
+                ),
+                new municipal(
+                    city = 'Taytay',
+                    imageUrl = 'Taytay.jpg',
+                    cases = '1913',
+                    active = '66',
+                    deaths = '76',
+                    recovered = '1771',
+                    phone = '0917-165-9009'
+                ),
+                new municipal(
+                    city = 'Tanay',
+                    imageUrl = 'Tanay.jpg',
+                    cases = '144',
+                    active = '17',
+                    deaths = '8',
+                    recovered = '119',
+                    phone = '(8)652-5413'
+                ),
+                new municipal(
+                    city = 'Teresa',
+                    imageUrl = 'Teresa.jpg',
+                    cases = '253',
+                    active = '4',
+                    deaths = '3',
+                    recovered = '246',
+                    phone = '(8)250-6800'
                 ),
 
             ];
@@ -204,52 +323,70 @@
 
 
 
-        function createCard(city,imageUrl,cases, active, deaths, recovered) {
+        function createCard(index, city, imageUrl, cases, active, deaths, recovered, phone) {
             var item =
                 '<div class="col-sm-6 col-md-4 card col-lg-3 mt-4 card-list px-0">' +
-                '<img src="assets/images/'+ imageUrl +'" class="card-img-top img-fluid w-100 img-max-h" alt="...">' +
+                '<div class="flip-box">' +
+                '<div class="flip-box-inner">' +
+                '<div class="flip-box-front">' +
+                '<img src="assets/images/' + imageUrl + '" class="card-img-top img-fluid w-100 img-max-h" alt="...">' + 
+                '</div>' +
+                '<div class="flip-box-back pt-2">' +
+                '<h2>' + city + '</h2>' +
+                '<p>Provincial Health Office <br> <i class="fa fa-phone-alt"></i>  ' + phone +'</p>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
                 '<div class="card-body">' +
                 '<h5 class="card-title">' + city + '</h5>' +
                 '<div class="card-text">' +
-                '<div class="row">'+
-                '<div class ="col text-data">' + active +'</div>' +
-                '<div class ="col text-data">' + cases +'</div>' +
+                '<div class="row">' +
+                '<div class ="col text-data">' + cases + '</div>' +
+                '<div class ="col text-data">' + active + '</div>' +
                 '</div>' +
-                '<div class="row">'+
+                '<div class="row">' +
                 '<div class ="col text-small">cases</div>' +
                 '<div class ="col text-small">active</div>' +
                 '</div>' +
-                '<div class="row">'+
-                '<div class ="col text-data">' + deaths +'</div>' +
-                '<div class ="col text-data">' + recovered +'</div>' +
+                '<div class="row">' +
+                '<div class ="col text-data">' + deaths + '</div>' +
+                '<div class ="col text-data">' + recovered + '</div>' +
                 '</div>' +
-                '<div class="row">'+
+                '<div class="row">' +
                 '<div class ="col text-small">deaths</div>' +
                 '<div class ="col text-small">recovered</div>' +
                 '</div>' +
                 '</div>' +
                 '<div class="float-right">' +
-                '<a class="btn btn-primary btn-sm mt-4">View more</a>' +
+                '<a onclick="setModalData(' + index + ')" data-toggle="modal" data-target="#MunicipalModal" class="btn btn-light btn-sm mt-4">View more</a>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
             return item;
         }
 
+        function setModalData(index) {
+            console.log("a");
+            document.getElementById("MunicipalModalLabel").innerHTML = municipalityList[index].city;
+            var ctxP = document.getElementById("pieChart").getContext('2d');
+            var myPieChart = new Chart(ctxP, {
+                type: 'pie',
+                data: {
+                    labels: ["Active", "Death", "Recovered"],
+                    datasets: [{
+                        data: [municipalityList[index].active, municipalityList[index].deaths, municipalityList[index].recovered],
+                        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C"],
+                        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870"]
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        }
+
         document.getElementById("Municipalities").innerHTML = allMunicipality;
-
     </script>
-    <!-- DITO MAG TATAPOS-->
-    <!-- Wag buburahin ang part na to hindi gagana ang mga animations at navigation bar -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- smooth navbar scrolling -->
-    <script src="assets/js/scrolling-nav.js"></script>
 </body>
 
 </html>
