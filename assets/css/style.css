@@ -2,6 +2,7 @@
 body{
     font-family: 'Roboto', sans-serif !important;
     color: #6B474C;
+    background-color: #FFFAFA;
 }
 
 p {
@@ -73,4 +74,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .active{
     color: #6B474C;
+}
+.max-height{
+    max-height: 200px;
 }
