@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap');
 body{
     font-family: 'Roboto', sans-serif !important;
+    color: #6B474C;
 }
 
 p {
     font-family: 'Roboto', sans-serif !important;
+    color: #6B474C;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Roboto Slab', serif !important;
+    color: #B84252;
 }
 .logo{
-    max-width: 12%;
+    max-width: 30px;
 }
 
 .navbar-hover:hover{
-    color: #EB5569;
+    color: #6B474C;
+    font-weight: 500;
 }
 
 .text-pink{
     color: #EB5569;
 }
-
+.s-color{
+    color: #6B474C;
+}
 .banner{
     padding-top: 100px;
 }
@@ -56,12 +62,15 @@ h1, h2, h3, h4, h5, h6{
   }
 
   .btn-pink{
-      background-color: #EB5569;
+      background-color: #6B474C;
       color: #FFF;
   }
 
   .btn-pink:hover{
-    border-color: #EB5569;
+    border-color: #6B474C;
     background-color: #FFF;
-    color: #EB5569;
+    color: #6B474C;
+}
+.active{
+    color: #6B474C;
 }

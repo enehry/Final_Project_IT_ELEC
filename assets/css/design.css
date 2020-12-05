@@ -9,8 +9,8 @@
 }
 .btn-light:hover {
     background-color: white !important;
-    border: solid black 2px;
-    color: #191919;
+    border: 1px solid #6B474C;
+    color: #6B474C;
 }
 .card-img-top {
     width: 100%;
