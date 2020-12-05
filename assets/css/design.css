@@ -2,7 +2,7 @@
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.1);
 }
 .btn-light, .btn-light:active, .btn-light:visited {
-    background-color: #F58A97 !important;
+    background-color: #EB5569 !important;
     border: 0;
     font-family: 'Roboto Medium';
     color: white;
@@ -64,7 +64,7 @@
   }
   
   .flip-box-back {
-    background-color: #F58A97;
+    background-color: #EB5569;
     color: white;
     transform: rotateY(180deg);
   }

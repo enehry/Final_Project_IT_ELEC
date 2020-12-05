@@ -15,7 +15,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .navbar-hover:hover{
-    color: #F58A97;
+    color: #EB5569;
+}
+
+.text-pink{
+    color: #EB5569;
 }
 
 .banner{
@@ -32,7 +36,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .bg-accent{
-    background-color: #191919;
+    background-color: #EB5569;
 }
 .page-footer{
     font-size: 13px !important; 
@@ -50,3 +54,14 @@ h1, h2, h3, h4, h5, h6{
         margin-left: auto;
     }
   }
+
+  .btn-pink{
+      background-color: #EB5569;
+      color: #FFF;
+  }
+
+  .btn-pink:hover{
+    border-color: #EB5569;
+    background-color: #FFF;
+    color: #EB5569;
+}
