@@ -2,6 +2,9 @@
 body{
     font-family: 'Roboto', sans-serif !important;
 }
+.active{
+    color: #F58A97;
+}
 
 p {
     font-family: 'Roboto', sans-serif !important;
