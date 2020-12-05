@@ -16,10 +16,13 @@ h1, h2, h3, h4, h5, h6{
 }
 .logo{
     max-width: 30px;
+    
 }
-
+.navbar-hover{
+    color: #c0c0c0;
+}
 .navbar-hover:hover{
-    color: #6B474C;
+    color: #FFF;
     font-weight: 500;
 }
 
@@ -30,10 +33,10 @@ h1, h2, h3, h4, h5, h6{
     color: #6B474C;
 }
 .banner{
-    padding-top: 100px;
+    margin-top: 50px;
 }
 .content{
-    padding-top: 100px;
+    margin-top: 50px;
 }
 
 .text-banner > h1{
@@ -43,7 +46,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .bg-accent{
-    background-color: #EB5569;
+    background-color: #6B474C;
 }
 .page-footer{
     font-size: 13px !important; 
@@ -73,8 +76,21 @@ h1, h2, h3, h4, h5, h6{
     color: #6B474C;
 }
 .active{
-    color: #6B474C;
+    color: #FFF;
 }
 .max-height{
-    max-height: 200px;
+    max-height: 150px;
+}
+#mainNav{
+    background-color: #6B474C !important;
+}
+.header-content{
+    background-color: #EB5569;
+    padding: 10px;
+    color: #FFF;
+    border-radius: 5px;
+}
+.max-size{
+    max-height: 100px;
+    width: 100px;
 }

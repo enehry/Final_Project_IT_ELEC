@@ -17,11 +17,11 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger mr-0" href="#page-top">
-                <h6 class="mb-0 mr-0 font-weight-w700"><img class="img-fluid mr-sm-2 logo"
-                        src="assets/images/covid19.png" alt="" srcset="">Rizal Covid19 Tracker</h6>
+                <h6 class="mb-0 mr-0 text-light"><img class="img-fluid mr-sm-2 logo" src="assets/images/covid19.png"
+                        alt="" srcset="">Rizal Covid19 Tracker</h6>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,125 +49,300 @@
         </div>
     </nav>
     <!-- Navigation End -->
-    <div class="container banner">
-        <div class="row d-flex align-items-center">
-            <!-- Carousel -->
-            <div class="col-sm-6 order-sm-12">
-                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/banner1.png" class="img-fluid" alt="social distancing">
+
+    <div class="all">
+        <div class="container banner">
+            <div class="row d-flex align-items-center">
+                <!-- Carousel -->
+                <div class="col-sm-6 order-sm-12">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/banner1.png" class="img-fluid" alt="social distancing">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/banner2.png" class="img-fluid" alt="human washing hands">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/banner2.png" class="img-fluid" alt="human washing hands">
-                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
-            </div>
-            <!-- Carousel End -->
-            <div class="col-sm-6 order-sm-1 p-4">
-                <div class="text-banner center-xs">
-                    <h1 class="s-color"><span class="text-pink">Always</span> wash your hands, Practice
-                        social distancing and <span class="text-pink">Wear a mask</span></h1>
-                </div>
-                <div class="text-center text-sm-left">
-                    <a href="about.htm" class="btn btn-pink mt-4 align-center-xs">
-                        Learn More
-                    </a>
+                <!-- Carousel End -->
+                <div class="col-sm-6 order-sm-1 p-4">
+                    <div class="text-banner center-xs">
+                        <h1 class="s-color"><span class="text-pink">Always</span> wash your hands, Practice
+                            social distancing and <span class="text-pink">Wear a mask</span></h1>
+                    </div>
+                    <div class="text-center text-sm-left">
+                        <a href="about.htm" class="btn btn-pink mt-4 align-center-xs">
+                            Learn More
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Text Banner END -->
-    <!-- DITO ILALAGAY ANG CODE-->
-    <div class="content">
-        <div class="container">
-            <div class="card p-4 mb-4">
-                <div class="row">
-                    <div class="col-md-4 order-sm-12">
-                        <div class="img-container text-center">
-                            <img class="img-fluid max-height" src="assets/images/hand-wash.png" alt="hand wash" srcset="">
+        <!-- Text Banner END -->
+        <!-- DITO ILALAGAY ANG CODE-->
+        <div class="content-body pt-4 mt-4">
+            <div class="container">
+                <!-- Card Infected  -->
+                <div class="row my-4">
+                    <div class="col-md-4 pb-4">
+                        <div class="card p-4">
+                            <div class="card-body text-center">
+                                <h2 class="card-title mb-4">Philippines</h2>
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>29k</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>438K</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Active
+                                    </div>
+                                    <div class="col">
+                                        Confirmed
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <h2>8,526</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>400K</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Death
+                                    </div>
+                                    <div class="col">
+                                        Recovered
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8 order-sm-1">
-                        <div class="text-content">
-                            <h2>Wash your hands often </h2>
-                            <br>
-                            <p>
-                                Wash your hands with soap frequently, especially when you are in a public
-                                area after blowing your nose, coughing or sneezing, with soap and water at least 20 seconds. <br><br>
-                                Use a hand sanitizer which contains at least 60 percent alcohol  when
-                                soap and water are not readily available. Cover and rub together
-                                all surfaces of your hands until they feel dry.
-                            </p>
+                    <div class="col-md-4 pb-4">
+                        <div class="card p-4">
+                            <div class="card-body text-center">
+                                <h2 class="card-title mb-4">Calabarzon</h2>
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>2,979</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>77k</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Active
+                                    </div>
+                                    <div class="col">
+                                        Confirmed
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <h2>71k</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>8,526</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Death
+                                    </div>
+                                    <div class="col">
+                                        Recovered
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <div class="card p-4">
+                            <div class="card-body text-center">
+                                <h2 class="card-title mb-4">Rizal</h2>
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>367</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>12k</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Active
+                                    </div>
+                                    <div class="col">
+                                        Confirmed
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col">
+                                        <h2>453</h2>
+                                    </div>
+                                    <div class="col">
+                                        <h2>12k</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Death
+                                    </div>
+                                    <div class="col">
+                                        Recovered
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="title-header p-4">
+                    <h1 class="font-weight-bold text-center">
+                        Protect yourself and your love one's in COVID19 
+                    </h1>
+                </div>
+                <div class="card p-4 mb-4">
+                    <div class="row d-flex">
+                        <div class="col-md-4 order-sm-12 align-self-center">
+                            <div class="img-container text-center mb-4">
+                                <img class="img-fluid max-height" src="assets/images/hand-wash.png" alt="hand wash"
+                                    srcset="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 order-sm-1">
+                            <div class="text-content">
+                                <h2 class="header-content">Wash your hands often </h2>
+                                <br>
+                                <p class="mx-4">
+                                    Wash your hands with soap frequently, especially when you are in a public
+                                    area after blowing your nose, coughing or sneezing, with soap and water at least 20
+                                    seconds. <br><br>
+                                    Use a hand sanitizer which contains at least 60 percent alcohol when
+                                    soap and water are not readily available. Cover and rub together
+                                    all surfaces of your hands until they feel dry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4 mb-4">
+                    <div class="row d-flex">
+                        <div class="col-md-4 align-self-center">
+                            <div class="img-container text-center mb-4">
+                                <img class="img-fluid max-height" src="assets/images/facemask.png" alt="hand wash"
+                                    srcset="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-content">
+                                <h2 class="header-content">Wear a mask when you are around with others</h2>
+                                <br>
+                                <p class="mx-4">
+                                    The mask is designed to protect other people.<br><br>
+                                    In public settings and when around people who don't live in your household,<br>
+                                    everyone should wear a mask, particularly when other social distancing measures are
+                                    hard
+                                    to maintain.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4 mb-4">
+                    <div class="row d-flex">
+                        <div class="col-md-4 order-sm-12 align-self-center">
+                            <div class="img-container text-center mb-4">
+                                <img class="img-fluid max-height" src="assets/images/social-distancing-icon.png"
+                                    alt="hand wash" srcset="">
+                            </div>
+                        </div>
+                        <div class="col-md-8 order-sm-1">
+                            <div class="text-content">
+                                <h2 class="header-content">Practice social distancing</h2>
+                                <br>
+                                <p class="mx-4">
+                                    Keep 6 feet distance if the ohter household member is sick'<br><br>
+                                    Set a distance about 6 feet between yourself and people who don't
+                                    live with your household, Remember that some people without symptoms may be able to
+                                    spread virus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p-4 mb-4">
+                    <div class="row d-flex">
+                        <div class="col-md-4 align-self-center">
+                            <div class="img-container text-center mb-4">
+                                <img class="img-fluid max-height" src="assets/images/avoid-sneezing-icon.png"
+                                    alt="hand wash" srcset="">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-content">
+                                <h2 class="header-content">Cover coughs and sneezes</h2>
+                                <br>
+                                <p class="px-4">
+                                    When you cough or sneeze, either cover your mouth and nose with
+                                    tissue or use the inside of your elbow and do not spit.<br><br>
+                                    Wash your hands immediately for at least 20 seconds with soap and water.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card p-4 mb-4">
+            <div class="container pt-4">
+                <div class="title-header px-4">
+                    <h1>COVID19 Most common symptoms</h1>
+                </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="img-container text-center">
-                            <img class="img-fluid max-height" src="assets/images/facemask.png" alt="hand wash" srcset="">
+                        <div class="card m-4">
+                            <div class="card-body text-center">
+                                <img class="card-img-top max-size" src="assets/images/fever-symp.png" alt="">
+                                <br>
+                                <br>
+                                <h4 class="card-title">Fever</h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="text-content">
-                            <h2>Wear a mask when you are around with others</h2>
-                            <br>
-                            <p>
-                                The mask is designed to protect other people.<br><br>
-                                In public settings and when around people who don\'t live in your household,<br> 
-                                everyone should wear a mask, particularly when other social distancing measures are hard to maintain.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-4 mb-4">
-                <div class="row">
-                    <div class="col-md-4 order-sm-12">
-                        <div class="img-container text-center">
-                            <img class="img-fluid max-height" src="assets/images/social-distancing-icon.png" alt="hand wash" srcset="">
-                        </div>
-                    </div>
-                    <div class="col-md-8 order-sm-1">
-                        <div class="text-content">
-                            <h2>Practice social distancing</h2>
-                            <br>
-                            <p>
-                                -Keep 6 feet distance if the ohter household member is sick'<br><br>
-                    -Set a distance about 6 feet between yourself and people who don\'t<br> 
-                    live with your household, Remember that some people without symptoms may be able to spread virus.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card p-4 mb-4">
-                <div class="row">
                     <div class="col-md-4">
-                        <div class="img-container text-center">
-                            <img class="img-fluid max-height" src="assets/images/avoid-sneezing-icon.png" alt="hand wash" srcset="">
+                        <div class="card m-4">
+                            <div class="card-body text-center">
+                                <img class="card-img-top max-size" src="assets/images/cough.png" alt="">
+                                <br>
+                                <br>
+                                <h4 class="card-title">Dry Cough</h4>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="text-content">
-                            <h2>Cover coughs and sneezes</h2>
-                            <br>
-                            <p>
-                                -When you cough or sneeze, either cover your mouth and nose with 
-                    tissue or use the inside of your elbow and do not spit.<br><br>
-                    -Wash your hands immediately for at least 20 seconds with soap and water.
-                            </p>
+                    <div class="col-md-4">
+                        <div class="card m-4">
+                            <div class="card-body text-center">
+                                <img class="card-img-top max-size" src="assets/images/fatigue.png" alt="">
+                                <br>
+                                <br>
+                                <h4 class="card-title">Tiredness</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,113 +350,6 @@
         </div>
     </div>
 
-    <!-- // TODO CARD -->
-    <!-- // TODO CARD -->
-    <!--<div class="card mt-4">
-        <div class="row">
-            <div class="wash">
-                <img src="hand-wash.png" class="card-image" alt="hand-wash">
-            </div>
-            <div class="hand">
-                <h2>Wash your hands often </h2>
-                <p>-Wash your hands with soap frequently, especially when you are in a public<br> 
-                    area after blowing your nose, coughing or sneezing, with soap and water at least 20 seconds.<br><br>
-                    -Use a hand sanitizer which contains at least 60 percent alcohol  when<br> 
-                    soap and water are not readily available. Cover and rub together<br> 
-                    all surfaces of your hands until they feel dry.</p>
-            </div>
-        </div>
-    </div>
-    <div class="card mt-4">
-        <div class="row">
-            <div class="face">
-                <img src="facemask.png" class="card-image" alt="facemask">
-            </div>
-            <div class="mask">
-                <h2>Wear a mask when you are around with others</h2>
-                <p>-The mask is designed to protect other people.<br><br>
-                    -In public settings and when around people who don\'t live in your household,<br> 
-                    everyone should wear a mask, particularly when other social distancing measures are hard to maintain.</p>
-            </div>
-        </div>
-    </div>
-    <div class="card mt-4">
-        <div class="row">
-            <div class="social">
-                <img src="social-distancing-icon.png" class="card-image" alt="social distancing">
-               </div>
-            <div class="distancing">
-                <h2>Practice social distancing</h2>
-                <p>-Keep 6 feet distance if the ohter household member is sick'<br><br>
-                    -Set a distance about 6 feet between yourself and people who don\'t<br> 
-                    live with your household, Remember that some people without symptoms may be able to spread virus.</p>
-                </div>
-            </div>
-        </div>
-    <div class="card mt-4">
-        <div class="row">
-            <div class="avoid">
-                <img src="avoid-sneezing-icon.png" class="card-image" alt="avoid sneezing">
-            </div>
-            <div class="sneezing">
-                <h2>Cover coughs and sneezes</h2>
-                <p>-When you cough or sneeze, either cover your mouth and nose with 
-                    tissue or use the inside of your elbow and do not spit.<br><br>
-                    -Wash your hands immediately for at least 20 seconds with soap and water.</p>
-            </div>
-        </div>
-    </div>-->
-    <!-- <div class="row">
-        <div class="col mb-12">
-            <div class="card">
-                <img src="assets/images/hand-wash.png" class="card-img-top" alt="hand-wash">
-                <div class="card-body">
-                    <h5 class="card-title">Wash your hands often</h5>
-                    <p class="card-text">-Wash your hands with soap frequently, especially when you are in a public
-                        area after blowing your nose, coughing or sneezing, with soap and water at least 20
-                        seconds.<br><br>
-                        -Use a hand sanitizer which contains at least 60 percent alcohol when
-                        soap and water are not readily available. Cover and rub together
-                        all surfaces of your hands until they feel dry.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="assets/images/facemask.png" class="card-img-top" alt="facemask">
-                <div class="card-body">
-                    <h5 class="card-title">Wear a mask when you are around with others</h5>
-                    <p class="card-text">-The mask is designed to protect other people.<br><br>
-                        -In public settings and when around people who don\'t live in your household,
-                        everyone should wear a mask, particularly when other social distancing measures are hard to
-                        maintain.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="assets/images/social-distancing-icon.png" class="card-img-top" alt="social distance">
-                <div class="card-body">
-                    <h5 class="card-title">Practice social distancing</h5>
-                    <p class="card-text">-Keep 6 feet distance if the ohter household member is sick'<br><br>
-                        -Set a distance about 6 feet between yourself and people who don\'t
-                        live with your household, Remember that some people without symptoms may be able to spread
-                        virus.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="assets/images/avoid-sneezing-icon.png" class="card-img-top" alt="avoid sneezing">
-                <div class="card-body">
-                    <h5 class="card-title">Cover coughs and sneezes</h5>
-                    <p class="card-text"></p>-When you cough or sneeze, either cover your mouth and nose with
-                    tissue or use the inside of your elbow and do not spit.<br><br>
-                    -Wash your hands immediately for at least 20 seconds with soap and water.</p>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 
     <!-- FOOTER -->
