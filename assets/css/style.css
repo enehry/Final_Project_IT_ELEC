@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6{
     margin-top: 50px;
 }
 .content{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .text-banner > h1{
@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6{
     max-height: 150px;
 }
 #mainNav{
-    background-color: #6B474C !important;
+    background-color: #6B474C;
 }
 .header-content{
     background-color: #EB5569;
@@ -93,4 +93,8 @@ h1, h2, h3, h4, h5, h6{
 .max-size{
     max-height: 100px;
     width: 100px;
+}
+.h-dark{
+    color: #EB5569;
+    font-weight: 500;
 }

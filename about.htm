@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="assets/vendor/font-awesome/all.css">
 </head>
 
-<body>
+<body id="bg-body">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger mr-0" href="#page-top">
                 <h6 class="mb-0 text-light mr-0"><img class="img-fluid mr-sm-2 logo" src="assets/images/covid19.png" alt=""
@@ -43,6 +43,13 @@
                         <a class="nav-link js-scroll-trigger mr-3" href="about.htm">
                             <h6 class="mb-0 active navbar-hover">About</h6>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="custom-control custom-switch mt-1">
+                            <input type="checkbox" class="custom-control-input" onchange="toggleDarkMode()"
+                                id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1"></label>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -108,14 +115,14 @@
                         <div class="2nd-content">
                             <p>Call your doctor's office if you develop the signature symptoms associated with COVID-19,
                                 including:</p>
-                            <ul>
+                            <ul id="ul1">
                                 <li>Fever (above 100.4 Fahrenheit)</li>
                                 <li>New cough</li>
                                 <li>New shortness of breath</li>
                             </ul>
                             <p>Before fever and lower respiratory symptoms emerge, other symptoms often occur, say UCI
                                 Health experts. They include:</p>
-                            <ul>
+                            <ul id="ul2">
                                 <li>Sore throat</li>
                                 <li>Headache</li>
                                 <li>Diarrhea</li>
@@ -133,7 +140,7 @@
     <br>
 
     <!-- FOOTER -->
-    <footer class="page-footer mt-4 bg-accent">
+    <footer class="page-footer mt-4 bg-accent" id="footer">
         <div class="footer-copyright text-center text-light py-3">© 2020 Copyright:
             <a class="text-light" href="#">HNJV GROUP</a>
         </div>
@@ -150,6 +157,9 @@
 
     <!-- smooth navbar scrolling -->
     <script src="assets/js/scrolling-nav.js"></script>
+
+    <!-- all function that use in about.htm-->
+    <script src="assets/js/about.js"></script>
 </body>
 
 </html>

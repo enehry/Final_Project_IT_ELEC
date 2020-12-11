@@ -12,12 +12,15 @@
     <!-- Custom styles -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- Animation -->
+    <link rel="stylesheet" href="assets/dist/aos.css">
+
 
 </head>
 
-<body>
+<body id="bg-body">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
         <div class="container">
             <a class="navbar-brand js-scroll-trigger mr-0" href="#page-top">
                 <h6 class="mb-0 mr-0 text-light"><img class="img-fluid mr-sm-2 logo" src="assets/images/covid19.png"
@@ -43,6 +46,13 @@
                         <a class="nav-link js-scroll-trigger mr-3" href="about.htm">
                             <h6 class="mb-0 navbar-hover">About</h6>
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="custom-control custom-switch mt-1">
+                            <input type="checkbox" class="custom-control-input" onchange="toggleDarkMode()"
+                                id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1"></label>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -79,7 +89,8 @@
                 <!-- Carousel End -->
                 <div class="col-sm-6 order-sm-1 p-4">
                     <div class="text-banner center-xs">
-                        <h1 class="s-color"><span class="text-pink">Always</span> wash your hands, Practice
+                        <h1 class="s-color" id="text-banner"><span class="text-pink">Always</span> wash your hands,
+                            Practice
                             social distancing and <span class="text-pink">Wear a mask</span></h1>
                     </div>
                     <div class="text-center text-sm-left">
@@ -97,39 +108,39 @@
                 <!-- Card Infected  -->
                 <div class="row my-4">
                     <div class="col-md-4 pb-4">
-                        <div class="card p-4">
+                        <div class="card dark-mode p-4">
                             <div class="card-body text-center">
-                                <h2 class="card-title mb-4">Philippines</h2>
+                                <h2 class="card-title mb-4 h-dark">Philippines</h2>
                                 <div class="row">
                                     <div class="col">
-                                        <h2>29k</h2>
+                                        <h2 class="h-dark">29k</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>438K</h2>
+                                        <h2 class="h-dark">438K</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Active
+                                        <p>Active</p>
                                     </div>
                                     <div class="col">
-                                        Confirmed
+                                        <p>Confirmed</p>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col">
-                                        <h2>8,526</h2>
+                                        <h2 class="h-dark">8,526</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>400K</h2>
+                                        <h2 class="h-dark">400K</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Death
+                                        <p>Death</p>
                                     </div>
                                     <div class="col">
-                                        Recovered
+                                        <p>Recovered</p>
                                     </div>
                                 </div>
                             </div>
@@ -138,37 +149,37 @@
                     <div class="col-md-4 pb-4">
                         <div class="card p-4">
                             <div class="card-body text-center">
-                                <h2 class="card-title mb-4">Calabarzon</h2>
+                                <h2 class="card-title mb-4 h-dark">Calabarzon</h2>
                                 <div class="row">
                                     <div class="col">
-                                        <h2>2,979</h2>
+                                        <h2 class="h-dark">2,979</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>77k</h2>
+                                        <h2 class="h-dark">77k</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Active
+                                        <p>Active</p>
                                     </div>
                                     <div class="col">
-                                        Confirmed
+                                        <p>Confirmed</p>
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col">
-                                        <h2>71k</h2>
+                                        <h2 class="h-dark">71k</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>8,526</h2>
+                                        <h2 class="h-dark">8,526</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Death
+                                       <p>Death</p> 
                                     </div>
                                     <div class="col">
-                                        Recovered
+                                       <p>Recovered</p>
                                     </div>
                                 </div>
                             </div>
@@ -177,49 +188,49 @@
                     <div class="col-md-4 pb-4">
                         <div class="card p-4">
                             <div class="card-body text-center">
-                                <h2 class="card-title mb-4">Rizal</h2>
+                                <h2 class="card-title mb-4 h-dark">Rizal</h2>
                                 <div class="row">
                                     <div class="col">
-                                        <h2>367</h2>
+                                        <h2 class="h-dark">367</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>12k</h2>
+                                        <h2 class="h-dark">12k</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Active
+                                        <p>Active</p>
                                     </div>
                                     <div class="col">
-                                        Confirmed
+                                        <p>Confirmed</p> 
                                     </div>
                                 </div>
                                 <div class="row mt-4">
                                     <div class="col">
-                                        <h2>453</h2>
+                                        <h2 class="h-dark">453</h2>
                                     </div>
                                     <div class="col">
-                                        <h2>12k</h2>
+                                        <h2 class="h-dark">12k</h2>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col">
-                                        Death
+                                        <p>Death</p>
                                     </div>
                                     <div class="col">
-                                        Recovered
+                                       <p>Recovered</p> 
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="title-header p-4">
-                    <h1 class="font-weight-bold text-center">
-                        Protect yourself and your love one's in COVID19 
+                <div class="title-header p-4" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+                    <h1 class="font-weight-bold text-center h-dark">
+                        Protect yourself and your love one's in COVID19
                     </h1>
                 </div>
-                <div class="card p-4 mb-4">
+                <div class="card p-4 mb-4" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
                     <div class="row d-flex">
                         <div class="col-md-4 order-sm-12 align-self-center">
                             <div class="img-container text-center mb-4">
@@ -229,7 +240,8 @@
                         </div>
                         <div class="col-md-8 order-sm-1">
                             <div class="text-content">
-                                <h2 class="header-content">Wash your hands often </h2>
+                                <h3 class="header-content" data-aos="fade-left" data-aos-delay="50"
+                                    data-aos-duration="1000">Wash your hands often </h3>
                                 <br>
                                 <p class="mx-4">
                                     Wash your hands with soap frequently, especially when you are in a public
@@ -243,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-4 mb-4">
+                <div class="card p-4 mb-4" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                     <div class="row d-flex">
                         <div class="col-md-4 align-self-center">
                             <div class="img-container text-center mb-4">
@@ -253,7 +265,8 @@
                         </div>
                         <div class="col-md-8">
                             <div class="text-content">
-                                <h2 class="header-content">Wear a mask when you are around with others</h2>
+                                <h3 class="header-content" data-aos="fade-right" data-aos-delay="50"
+                                    data-aos-duration="1000">Wear a mask when you are around with others</h3>
                                 <br>
                                 <p class="mx-4">
                                     The mask is designed to protect other people.<br><br>
@@ -266,7 +279,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-4 mb-4">
+                <div class="card p-4 mb-4" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
                     <div class="row d-flex">
                         <div class="col-md-4 order-sm-12 align-self-center">
                             <div class="img-container text-center mb-4">
@@ -276,7 +289,8 @@
                         </div>
                         <div class="col-md-8 order-sm-1">
                             <div class="text-content">
-                                <h2 class="header-content">Practice social distancing</h2>
+                                <h2 class="header-content" data-aos="fade-left" data-aos-delay="50"
+                                    data-aos-duration="1000">Practice social distancing</h2>
                                 <br>
                                 <p class="mx-4">
                                     Keep 6 feet distance if the ohter household member is sick'<br><br>
@@ -288,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card p-4 mb-4">
+                <div class="card p-4 mb-4" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
                     <div class="row d-flex">
                         <div class="col-md-4 align-self-center">
                             <div class="img-container text-center mb-4">
@@ -298,7 +312,8 @@
                         </div>
                         <div class="col-md-8">
                             <div class="text-content">
-                                <h2 class="header-content">Cover coughs and sneezes</h2>
+                                <h2 class="header-content" data-aos="fade-right" data-aos-delay="50"
+                                    data-aos-duration="1000">Cover coughs and sneezes</h2>
                                 <br>
                                 <p class="px-4">
                                     When you cough or sneeze, either cover your mouth and nose with
@@ -311,37 +326,37 @@
                 </div>
             </div>
             <div class="container pt-4">
-                <div class="title-header px-4">
-                    <h1>COVID19 Most common symptoms</h1>
+                <div class="title-header px-4" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">
+                    <h1 class="h-dark">COVID19 Most common symptoms</h1>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card m-4">
+                        <div class="card m-4" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
                             <div class="card-body text-center">
                                 <img class="card-img-top max-size" src="assets/images/fever-symp.png" alt="">
                                 <br>
                                 <br>
-                                <h4 class="card-title">Fever</h4>
+                                <h4 class="card-title h-dark">Fever</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card m-4">
+                        <div class="card m-4" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
                             <div class="card-body text-center">
                                 <img class="card-img-top max-size" src="assets/images/cough.png" alt="">
                                 <br>
                                 <br>
-                                <h4 class="card-title">Dry Cough</h4>
+                                <h4 class="card-title h-dark">Dry Cough</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card m-4">
+                        <div class="card m-4" data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">
                             <div class="card-body text-center">
                                 <img class="card-img-top max-size" src="assets/images/fatigue.png" alt="">
                                 <br>
                                 <br>
-                                <h4 class="card-title">Tiredness</h4>
+                                <h4 class="card-title h-dark">Tiredness</h4>
                             </div>
                         </div>
                     </div>
@@ -353,7 +368,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="page-footer mt-4 bg-accent">
+    <footer class="page-footer mt-4 bg-accent" id="footer">
         <div class="footer-copyright text-center text-light py-3">© 2020 Copyright:
             <a class="text-light" href="#">HNJV GROUP</a>
         </div>
@@ -370,6 +385,17 @@
 
     <!-- smooth navbar scrolling -->
     <script src="assets/js/scrolling-nav.js"></script>
+
+    <!-- Sliding animation-->
+    <script src="assets/dist/aos.js"></script>
+
+    <!-- Initialize animation -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- all functions that use in home.htm-->
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>
